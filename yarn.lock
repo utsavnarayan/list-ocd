@@ -3281,6 +3281,12 @@ inflight@^1.0.4:
     once "^1.3.0"
     wrappy "1"
 
+infobox-parser@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/infobox-parser/-/infobox-parser-2.0.2.tgz#4b13d817dfce094a840ab3c33011a113a758e0a0"
+  dependencies:
+    camelcase "^4.1.0"
+
 inherits@2, inherits@2.0.3, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.0, inherits@~2.0.1, inherits@~2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
@@ -3602,7 +3608,7 @@ isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
 
-isomorphic-fetch@^2.1.1:
+isomorphic-fetch@^2.1.1, isomorphic-fetch@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
   dependencies:
@@ -7007,6 +7013,13 @@ widest-line@^1.0.0:
   resolved "https://registry.yarnpkg.com/widest-line/-/widest-line-1.0.0.tgz#0c09c85c2a94683d0d7eaf8ee097d564bf0e105c"
   dependencies:
     string-width "^1.0.1"
+
+wikijs@^4.3.4:
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/wikijs/-/wikijs-4.3.4.tgz#294210ce97bea07050b008f467459d2a3d3352e3"
+  dependencies:
+    infobox-parser "^2.0.2"
+    isomorphic-fetch "^2.2.1"
 
 window-size@0.1.0:
   version "0.1.0"

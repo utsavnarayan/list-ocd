@@ -32,7 +32,6 @@ class ListComponent extends Component {
       <List>
         {this.props.items.map(item => (
           <ListItem key={item.year} dense button>
-
             <Avatar>{item.rank}</Avatar>
             <Avatar alt="Remy Sharp" src="https://upload.wikimedia.org/wikipedia/en/7/79/Hahk.jpg" />
             <ListItemText primary={item.title} />
