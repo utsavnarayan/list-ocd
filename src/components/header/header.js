@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
 import List from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 import Drawer from 'material-ui/Drawer';
 import { mailFolderListItems, otherMailFolderListItems } from '../main-menu/main-menu';
-
+import './header.scss';
 
 class Header extends Component {
   state = {
@@ -35,17 +35,17 @@ class Header extends Component {
 
     return (
       <div>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton  color="contrast" aria-label="Menu">
-            <MenuIcon onClick={this.toggleDrawer('left', true)}/>
-          </IconButton>
-          <Typography type="title" color="inherit">
-            List OCD
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <Drawer open={this.state.left} onRequestClose={this.toggleDrawer('left', false)}>
+        <AppBar position="static">
+          <Toolbar>
+            <IconButton color="contrast" aria-label="Menu">
+              <MenuIcon onClick={this.toggleDrawer('left', true)} />
+            </IconButton>
+            <Link to="/" className="header-logo">
+            <img src={require("../../static/logo.png")} alt="List OCD"/>
+            </Link>
+          </Toolbar>
+        </AppBar>
+        <Drawer open={this.state.left} onRequestClose={this.toggleDrawer('left', false)}>
           <div
             tabIndex={0}
             role="button"
@@ -55,7 +55,7 @@ class Header extends Component {
             {sideList}
           </div>
         </Drawer>
-        </div>
+      </div>
     );
   }
 }
