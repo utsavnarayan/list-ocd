@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
-import './article.css';
-import { movies } from '../../dummy/lists';
+import './article.scss';
 
-const articleStyles = {
-  backgroundImage: 'url(' + movies[0].image + ')'
-};
+
+
 
 
 class Article extends Component {
   render() {
+    const articleStyles = {
+      backgroundImage: 'url(' + this.props.item.image + ')'
+    };
     return (
       <article>
-        <section class="banner" style={articleStyles}>
-          <h1>{movies[0].title}</h1>
+        <section className="banner" style={articleStyles}>
+          <h1>{this.props.item.title}</h1>
         </section>
-        <section class="details">
-          {movies[0].desc}
+        <section className="details">
+          {this.props.item.desc}
         </section>
       </article>
     );
